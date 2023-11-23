@@ -1,0 +1,7 @@
+secret=pruebas
+algorithm=HS512
+BBDD_USER=postgres
+BBDD_PASS=postgres
+BBDD_HOST=localhost
+BBDD_BBDD=postgres
+BBDD_PORT=54322
