@@ -13,9 +13,52 @@ Se crea proyecto base de Fast API con una arquitectura modular y con el uso de c
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker compose](https://docs.docker.com/compose/install/)
 
+#### Windows
+
+la instalacion de python en windows, basta con instalar pyenv y seleccionar la version que se requiere
+en caso de tener instalado python previamente en windows se debe desinstalar, y hacer la instalacion
+con pyenv solo validar que version de python tienen para dejarla de manera predeterminada despues de
+crear el ambiente virtual
+
 ## Ambiente
 
-Instalar dependencias e iniciar el servidor
+Creamos un ambiente virtual con la version de python, con la finalidad de no generar
+conflictos entre las versiones de python
+
+```sh
+pyenv install 3.9.6
+
+pyenv local 3.9.6
+```
+
+Validamos que la version de python sea la que necesitamos
+
+```sh
+python --version
+```
+
+creamos el ambiente virtual
+
+```sh
+python -m venv .venv
+```
+
+## Activar el ambiente virtual de python
+
+#### linux / mac
+
+```sh
+source ./.venv/bin/activate
+```
+
+#### windows power-shell
+
+```sh
+.\.venv\Scripts\activate
+```
+
+Una vez que la version de python es la correcta y el ambiente virtual esta creado
+procedemos a instalar dependencias e iniciar el servidor
 
 ```sh
 pip install -r requeriments.txt
@@ -39,3 +82,5 @@ si el servidor esta corriendo correctamente podriamos ver
 acceder a la siguiente url
 
 ### [http://localhost:8432/docs](http://localhost:8432/docs)
+
+Donde podremos ver el listado de los servicios y su forma de consumirlos
